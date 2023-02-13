@@ -1408,3 +1408,21 @@ fi
 echo "Before running the commands in the What To Do Next section, copy/paste/run these commands in your terminal:"
 echo " export HZN_ORG_ID=$EXCHANGE_USER_ORG"
 echo " export HZN_EXCHANGE_USER_AUTH=admin:$userAdminPw"
+
+# send generated vars to a file somewhere in /tmp
+cat >/tmp/hznKeys.cfg<<EOL
+EXCHANGE_ROOT_PW=${EXCHANGE_ROOT_PW}
+EXCHANGE_HUB_ADMIN_PW=${EXCHANGE_HUB_ADMIN_PW}
+EXCHANGE_SYSTEM_ADMIN_PW=${EXCHANGE_SYSTEM_ADMIN_PW}
+AGBOT_TOKEN=${AGBOT_TOKEN}
+EXCHANGE_USER_ADMIN_PW=${EXCHANGE_USER_ADMIN_PW}
+HZN_DEVICE_TOKEN=${HZN_DEVICE_TOKEN}
+VAULT_UNSEAL_KEY=${VAULT_UNSEAL_KEY}
+VAULT_ROOT_TOKEN=${VAULT_ROOT_TOKEN}
+...
+EOL
+
+cat /tmp/hznKeys.cfg
+
+echo ""
+echo "Stored all generated keys and tokens in /tmp/hznKeys.cfg"
