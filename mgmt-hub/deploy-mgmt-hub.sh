@@ -1425,4 +1425,4 @@ EOL
 cat /tmp/hznKeys.cfg
 
 echo ""
-echo "Stored all generated keys and tokens in /tmp/hznKeys.cfg"
+echo "Stored all generated keys and tokens in /tmp/hznKeys.cfg. Please save the credentials in a safe place"
